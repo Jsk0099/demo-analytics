@@ -1,0 +1,19 @@
+<div class="main-con">
+    @for (i of products; track $index) {
+        <div class="p-container" (click)="open(i)">
+            {{i.title}}
+        </div>
+    }
+</div>
+
+@if(selectedItem) {
+    <div class="overlay">
+        <div class="overlay-con" >
+            <h2>{{selectedItem.title}}</h2>
+            <p>{{selectedItem.description}}</p>
+            <img [src]="selectedItem.image" alt="{{selectedItem.title}}" />
+            <p>Price: ${{selectedItem.price}}</p>
+            <button (click)="close()">Close</button>
+        </div>
+    </div>
+}
