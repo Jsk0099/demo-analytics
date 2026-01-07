@@ -19,7 +19,9 @@ export class AppComponent {
 
     let userId = this.generateUniqueUserId();
     (<any>window)['userId'] = userId;
+    console.log('UserId before: ', userId);
     Clarity.identify(userId); // only custom-id is required
+    console.log('UserId after: ', userId);
   }
 
   generateUniqueUserId() {
