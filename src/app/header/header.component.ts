@@ -8,5 +8,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
+  userId = (<any>window)['userId'];
 }
